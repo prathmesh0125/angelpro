@@ -79,7 +79,7 @@ export function Header() {
             isExternal
           >
             <Button
-              // as={"a"}
+              as={"a"}
               display={{ base: "none", md: "inline-flex" }}
               fontSize={"sm"}
               fontWeight={600}
@@ -114,7 +114,7 @@ const DesktopNav = () => {
           <Popover trigger={"hover"} placement={"bottom-start"}>
             <PopoverTrigger>
               <Box
-                // as="a"
+                as="a"
                 p={2}
                 href={navItem.href ?? "#"}
                 fontSize={"sm"}
@@ -155,7 +155,7 @@ const DesktopNav = () => {
 const DesktopSubNav = ({ label, href, subLabel }) => {
   return (
     <Box
-      // as="a"
+      as="a"
       href={href}
       role={"group"}
       display={"block"}
@@ -211,7 +211,7 @@ const MobileNavItem = ({ label, children, href }) => {
     <Stack spacing={4} onClick={children && onToggle}>
       <Box
         py={2}
-        // as="a"
+        as="a"
         href={href ?? "#"}
         justifyContent="space-between"
         alignItems="center"
@@ -247,7 +247,7 @@ const MobileNavItem = ({ label, children, href }) => {
         >
           {children &&
             children.map((child) => (
-              <Box  key={child.label} py={2} href={child.href}>
+              <Box as="a" key={child.label} py={2} href={child.href}>
                 {child.label}
               </Box>
             ))}

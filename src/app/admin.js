@@ -15,7 +15,7 @@ export default function AdminPage() {
     }
     
     fetchUsers();
-  }, [data]);
+  }, []);
 
   return (
     <div>

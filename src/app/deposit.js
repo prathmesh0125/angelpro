@@ -1,19 +1,19 @@
-import React, {useRef, useEffect} from 'react'
+import React, {useRef} from 'react'
 import './globals.css'
 import { X } from 'lucide-react';
 
 function deposit({onClose}) {
-    const modalRef = useRef();
+    const ModalRef = useRef();
 
     const closeModal = (e) => {
-        if(modalRef.current === e.target){
+        if(ModalRef.current === e.target){
             onClose();
         }
     }
 
 
   return (
-    <div ref={modalRef} onClick={closeModal} className='fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex justify-center items-center'>
+    <div ref={ModalRef} onClick={closeModal} className='fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex justify-center items-center'>
         <div className='mt-10 flex flex-col gap-5 text-white'>
             <button onClick={onClose} className='place-self-end'>
                 <X size={30}/>

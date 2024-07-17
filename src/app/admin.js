@@ -1,7 +1,6 @@
 // pages/admin.js
 "use client"
 
-import { data } from 'autoprefixer';
 import { useEffect, useState } from 'react';
 
 export default function AdminPage() {
@@ -9,7 +8,7 @@ export default function AdminPage() {
 
   useEffect(() => {
     async function fetchUsers() {
-      const response = await fetch('/api/users');
+      const response = await fetch('/api/user');
       const data = await response.json();
       setUsers(data);
     }
@@ -31,7 +30,7 @@ export default function AdminPage() {
         </thead>
         <tbody>
           {users.map(user => (
-            <tr key={user.id}>
+            <tr key={user._id}>
               <td>{user.id}</td>
               <td>{user.name}</td>
               <td>{user.email}</td>

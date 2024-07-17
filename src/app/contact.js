@@ -99,7 +99,7 @@ export default function Contact() {
                             isExternal
                           >
                             <Button
-                              as={"a"}
+                              // as={"a"}
                               display={{ base: "none", md: "inline-flex" }}
                               fontSize={"sm"}
                               fontWeight={600}

@@ -79,7 +79,7 @@ export function Header() {
             isExternal
           >
             <Button
-              as={"a"}
+              // as={"a"}
               display={{ base: "none", md: "inline-flex" }}
               fontSize={"sm"}
               fontWeight={600}
